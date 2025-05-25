@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melos - Learn Languages with Music</title>
+    <style>
+        :root {
+            --primary-color: #1DB954; /* A green, adjust if Melos has a different primary color */
+            --dark-color: #191414;
+            --light-color: #FFFFFF;
+            --text-color: #333;
+            --section-bg: #f9f9f9;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 960px; /* Slightly smaller for a more basic feel */
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        header {
+            background: var(--light-color);
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.7em;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background-color: var(--section-bg); /* Light background for hero */
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        .hero h1 .highlight {
+             color: var(--primary-color);
+        }
+
+        .hero p.tagline {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            color: #555;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .app-stores {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .app-stores img {
+            height: 45px;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 50px 0;
+        }
+        .features .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+        }
+
+        .features-list { /* Changed from grid to simple list for basic feel */
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            background: var(--light-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .feature-item h3 {
+            font-size: 1.3em;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .feature-item p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        /* Call to Action Section */
+        .cta {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: var(--light-color);
+        }
+
+        .cta p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: #ccc; /* Lighter grey for dark bg */
+            text-align: center;
+            padding: 25px 0;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0 0 8px 0;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p.tagline {
+                font-size: 1.1em;
+            }
+            .features .section-title {
+                font-size: 1.7em;
+            }
+            .feature-item h3 {
+                font-size: 1.2em;
+            }
+            header .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav ul {
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Melos</a>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Learn Languages with <span class="highlight">Music</span>.</h1>
+            <p class="tagline">Melos helps you learn new phrases with music.</p>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Core Features</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <h3>Interactive Lyrics</h3>
+                    <p>Engage with synchronized Korean and English lyrics. Tap lines to jump to specific parts of the song.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Detailed Breakdowns</h3>
+                    <p>Understand every line with vocabulary explanations, grammar points, and example sentences.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Track Your Progress</h3>
+                    <p>Test your knowledge with quizzes for each song and see your scores. Save your favorite songs and albums to your library.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Guest Mode & Account Sync</h3>
+                    <p>Try out the app as a guest, and then create an account using Email, Google, or Apple to save your progress across devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Learning?</h2>
+            <p>Download Melos today and turn your love for music into a language learning adventure!</p>
+            <div class="app-stores">
+                <!-- Replace with actual App Store and Google Play badges/links -->
+                <a href="YOUR_APP_STORE_LINK_HERE" target="_blank"><img src="https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg" alt="Download on the App Store"></a>
+                <a href="YOUR_GOOGLE_PLAY_LINK_HERE" target="_blank"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play"></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Melos. All rights reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
