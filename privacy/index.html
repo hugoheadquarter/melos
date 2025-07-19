@@ -62,7 +62,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy for Melos</h1>
-        <p class="date">Last Updated: May 25, 2025</p>
+        <p class="date">Last Updated: July 20, 2025</p>
 
         <h2>1. Introduction</h2>
         <p>Welcome to Melos ("we," "us," or "our"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application, Melos (the "Application"). Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the Application.</p>
@@ -73,11 +73,11 @@
 
         <h3>2.1. Personal Data You Provide to Us</h3>
         <ul>
-            <li><strong>Account Information:</strong> When you register for an account, we collect your email address. If you choose to create or update your profile, we may also collect your username and avatar URL. This information is associated with your unique user ID.</li>
+            <li><strong>Account Information:</strong> When you register for an account, we collect your email address. This information is associated with your unique user ID.</li>
             <li><strong>Authentication Information (Third-Party Sign-In):</strong>
                 <ul>
-                    <li>If you choose to log in or sign up using Google, we will receive information from Google such as your name, email address, and profile picture, as permitted by Google and your Google privacy settings. This is facilitated via an ID Token.</li>
-                    <li>If you choose to log in or sign up using Apple (on iOS devices), we will receive information from Apple such as your name and email address (which may be a private relay email), as permitted by Apple and your Apple ID settings. This is facilitated via an Identity Token and a nonce for security.</li>
+                    <li>If you choose to log in or sign up using <strong>Google</strong>, we will receive information from Google such as your name, email address, and profile picture, as permitted by Google and your Google privacy settings. This is facilitated via an ID Token.</li>
+                    <li>If you choose to log in or sign up using <strong>Apple</strong> (on iOS devices), we will receive information from Apple such as your name and email address (which may be a private relay email), as permitted by Apple and your Apple ID settings. This is facilitated via an Identity Token and a nonce for security.</li>
                 </ul>
             </li>
             <li><strong>User-Generated Content:</strong> If you create playlists, we collect the playlist name and description you provide.</li>
@@ -88,20 +88,14 @@
             <li><strong>Song Interaction Data:</strong> We collect information about your interactions with songs and albums, including:
                 <ul>
                     <li>Songs you "like" (<code>song_likes</code>).</li>
-                    <li>Albums you save to your library (<code>user_saved_albums</code>).</li>
                     <li>Your listening history, including albums played and when they were last played (<code>user_listening_history</code>).</li>
                 </ul>
             </li>
-            <li><strong>Learning Progress:</strong> We track your progress within the Application, including:
-                <ul>
-                    <li>Quiz scores (last score, highest score, total questions attempted) for songs (<code>user_song_progress</code>).</li>
-                    <li>Number of times a song's learning module (e.g., quiz) has been completed.</li>
-                    <li>Timestamps for when progress was last updated or a quiz was last attempted.</li>
-                </ul>
-            </li>
-            <li><strong>Guest Onboarding Status:</strong> If you use the Application as a guest, we store a flag locally on your device (using AsyncStorage) to indicate whether you have completed the guest onboarding tutorial (<code>GUEST_ONBOARDING_COMPLETED_KEY</code>). This information is not typically transmitted to our servers unless you subsequently create an account.</li>
+            <li><strong>Learning Progress:</strong> We track your progress within the Application, including quiz scores (last score, highest score, total questions attempted) for songs (<code>user_song_progress</code>) and your daily activity to maintain your learning streak.</li>
+            <li><strong>Analytics and Usage Data:</strong> To understand how you interact with our Application, we use <strong>Mixpanel</strong>, a third-party analytics service. This includes tracking events such as screens viewed, buttons tapped, songs played, quiz performance, session duration, and other user interactions. This helps us improve app features and functionality.</li>
+            <li><strong>Subscription and Purchase Information:</strong> To manage premium subscriptions, we use <strong>RevenueCat</strong> and <strong>Superwall</strong>. When you make a purchase, RevenueCat processes the transaction through the Apple App Store or Google Play Store and provides us with information about your subscription status (e.g., active, expired) and entitlement level. We do not receive or store your credit card information.</li>
+            <li><strong>Advertising Data:</strong> For our free users, we display advertisements provided by <strong>Google AdMob</strong>. To serve relevant ads, Google may collect and use data, including your device's advertising identifier (IDFA for iOS, AAID for Android). On iOS, we will ask for your permission to track via the App Tracking Transparency (ATT) framework before this identifier is used. You can manage your ad preferences in your device settings.</li>
             <li><strong>Device and Connection Information:</strong> Like most mobile applications, we may collect standard device information (such as device type, operating system version) and network information (such as IP address, network status via NetInfo) automatically through our backend provider (Supabase) and for the proper functioning of the Application.</li>
-            <li><strong>Error and Performance Data:</strong> We may collect anonymized or pseudonymized data related to errors, crashes, and performance of the Application to help us improve its stability and functionality.</li>
         </ul>
         
         <h3>2.3. Information from Third Parties</h3>
@@ -114,12 +108,13 @@
             <li>Create and manage your account.</li>
             <li>Authenticate your access to the Application, including via email OTP, Google, and Apple.</li>
             <li>Provide and deliver the core services of the Application, such as displaying lyrics, playing music, and offering language learning features.</li>
-            <li>Personalize your experience by, for example, showing your liked songs, saved albums, and listening history.</li>
+            <li>Personalize your experience by showing your liked songs and listening history.</li>
             <li>Track your learning progress, display quiz scores, and manage your educational journey within the app.</li>
-            <li>Operate and maintain the Application, including monitoring and analyzing usage and trends to improve your experience.</li>
-            <li>Respond to your requests and provide customer support (if applicable).</li>
-            <li>Communicate with you regarding your account or important service-related notices (e.g., OTP codes).</li>
-            <li>Ensure the security and integrity of our Application, such as by using nonces for OAuth sign-ins.</li>
+            <li>Monitor and analyze usage and trends via analytics to improve your experience and the Application's performance.</li>
+            <li>Display relevant advertisements to free users to support the Application.</li>
+            <li>Process transactions and manage your premium subscription.</li>
+            <li>Respond to your requests and provide customer support.</li>
+            <li>Ensure the security and integrity of our Application.</li>
             <li>Comply with legal obligations.</li>
         </ul>
 
@@ -127,46 +122,44 @@
         <p>We do not sell your personal information. We may share information we have collected about you in certain situations. Your information may be disclosed as follows:</p>
         <ul>
             <li><strong>By Law or to Protect Rights:</strong> If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.</li>
-            <li><strong>Third-Party Service Providers:</strong> We share your information with Supabase, our backend service provider, which hosts our database, handles authentication, and stores files (like avatars and audio). Supabase's use of your information is governed by their privacy policy. We may also use other third-party vendors for services such as analytics or error reporting, who will only receive the information necessary to perform their designated functions and are obligated to maintain the confidentiality and security of that information.</li>
-            <li><strong>Third-Party Authentication Services:</strong> If you log in using Google or Apple, your interaction with these services is governed by their respective privacy policies. We only receive the necessary tokens and profile information to authenticate you.</li>
-            <li><strong>With Your Consent:</strong> We may share your information with third parties when you explicitly consent to such sharing. For example, if you use a feature that involves sharing content via the device's native sharing capabilities (e.g., copying a share link to the clipboard).</li>
+            <li><strong>Third-Party Service Providers:</strong> We share your information with our third-party vendors to perform services for us and on our behalf. This includes:
+                <ul>
+                    <li><strong>Supabase:</strong> Our backend service provider for database, authentication, and storage.</li>
+                    <li><strong>Mixpanel:</strong> For analytics and understanding user engagement.</li>
+                    <li><strong>RevenueCat & Superwall:</strong> For managing in-app purchases, subscriptions, and paywalls.</li>
+                    <li><strong>Google AdMob:</strong> For serving advertisements to our free users.</li>
+                </ul>
+                These third parties will only receive the information necessary to perform their designated functions and are obligated to maintain the confidentiality and security of that information.
+            </li>
             <li><strong>Business Transfers:</strong> We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>
         </ul>
 
         <h2>5. Data Storage and Security</h2>
-        <p>We, through our service provider Supabase, use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable, and no method of data transmission can be guaranteed against any interception or other type of misuse. Any information disclosed online is vulnerable to interception and misuse by unauthorized parties. Therefore, we cannot guarantee complete security if you provide personal information.</p>
+        <p>We, through our service provider Supabase, use administrative, technical, and physical security measures to help protect your personal information. While we have taken reasonable steps to secure the personal information you provide to us, please be aware that despite our efforts, no security measures are perfect or impenetrable.</p>
         <p>Your information is stored on Supabase servers, which may be located in various regions globally. Supabase implements industry-standard security practices.</p>
-        <p>Locally on your device, we use AsyncStorage to store your guest onboarding completion status.</p>
+        <p>Locally on your device, we use secure, encrypted on-device storage (<strong>MMKV</strong>) to store your audio playback settings and answers from the initial onboarding questionnaire before you create an account.</p>
 
         <h2>6. Data Retention</h2>
-        <p>We will retain your personal information for as long as your account is active or as needed to provide you services, comply with our legal obligations, resolve disputes, and enforce our agreements. Data related to your learning progress, likes, and playlists will be retained as long as your account exists to ensure a consistent user experience. If you delete your account, we will take reasonable steps to delete your personal information, subject to any legal or operational retention needs.</p>
-        <p>Guest onboarding status stored locally will persist until the Application's data is cleared or the Application is uninstalled.</p>
+        <p>We will retain your personal information for as long as your account is active or as needed to provide you services, comply with our legal obligations, resolve disputes, and enforce our agreements. Data related to your learning progress, likes, and playlists will be retained as long as your account exists. If you delete your account, we will take reasonable steps to delete your personal information in accordance with our data deletion processes.</p>
 
         <h2>7. Your Data Rights and Choices</h2>
-        <p>Depending on your location, you may have certain rights regarding your personal information. These may include the right to:</p>
-        <ul>
-            <li>Access the personal information we hold about you.</li>
-            <li>Request correction of inaccurate personal information.</li>
-            <li>Request deletion of your personal information.</li>
-            <li>Object to or restrict certain processing of your personal information.</li>
-        </ul>
-        <p>To exercise these rights, please contact us at <a href="mailto:support@mymelos.com">support@mymelos.com</a>. We will respond to your request within a reasonable timeframe and in accordance with applicable laws.</p>
-        <p>You can typically manage your Google and Apple account information and privacy settings through their respective platforms.</p>
-        <p>You can manage your username and avatar (if this feature is enabled) within the Application's profile settings.</p>
+        <p>Depending on your location, you may have certain rights regarding your personal information. These may include the right to access, correct, or delete your personal information. You can permanently delete your account and associated personal data at any time through the 'Delete Account' option in the Profile screen of the Application.</p>
+        <p>To exercise any other rights, please contact us at <a href="mailto:support@mymelos.com">support@mymelos.com</a>. We will respond to your request within a reasonable timeframe and in accordance with applicable laws.</p>
+        <p>You can manage your Google and Apple account information and privacy settings through their respective platforms.</p>
 
         <h2>8. Children's Privacy</h2>
-        <p>Melos is not intended for use by children under the age of 13 (or 16 in certain jurisdictions in the European Economic Area). We do not knowingly collect personal information from children under these ages. If we become aware that we have collected personal information from a child under the relevant age without parental consent, we will take steps to delete that information.</p>
+        <p>Melos is not intended for use by children under the age of 13 (or 16 in certain jurisdictions). We do not knowingly collect personal information from children under these ages. If we become aware that we have collected personal information from a child under the relevant age without parental consent, we will take steps to delete that information.</p>
 
         <h2>9. Third-Party Services and Links</h2>
         <p>The Application uses third-party services for its functionality, as detailed below:</p>
         <ul>
             <li><strong>Supabase:</strong> For backend database, authentication, and storage. <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">Supabase Privacy Policy</a></li>
+            <li><strong>Mixpanel:</strong> For product analytics to understand user behavior. <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Mixpanel Privacy Policy</a></li>
+            <li><strong>RevenueCat:</strong> For managing in-app subscriptions and purchases. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a></li>
+            <li><strong>Superwall:</strong> For displaying and managing paywalls and premium offers. <a href="https://superwall.com/privacy" target="_blank" rel="noopener noreferrer">Superwall Privacy Policy</a></li>
+            <li><strong>Google AdMob:</strong> For serving advertisements in the free version. <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Advertising Privacy & Terms</a></li>
             <li><strong>Google Sign-In:</strong> For authentication. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
             <li><strong>Apple Sign-In:</strong> For authentication. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a></li>
-            <li><strong>Expo (React Native Services):</strong> Our application is built using Expo, which may collect certain diagnostic and usage data. <a href="https://expo.dev/privacy" target="_blank" rel="noopener noreferrer">Expo Privacy Policy</a></li>
-            <li><strong>React Native Community NetInfo:</strong> Used for checking network connectivity. This library itself does not collect PII but provides information about the device's network state.</li>
-            <li><strong>React Native Track Player:</strong> Used for local audio playback. Does not inherently transmit PII.</li>
-            <li><strong>React Native Clipboard:</strong> Used when you choose to copy share links. Data is copied to your device's clipboard.</li>
         </ul>
         <p>We are not responsible for the privacy practices of these third-party services. We encourage you to review their privacy policies.</p>
 
