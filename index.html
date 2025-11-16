@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melos - Learn Languages with Music</title>
+    <title>Melos - Language Learning Through Music</title>
     <link rel="icon" type="image/png" href="/icon.png">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         :root {
-            --primary-color: #1DB954; /* A green, adjust if Melos has a different primary color */
-            --dark-color: #191414;
-            --light-color: #FFFFFF;
-            --text-color: #333;
-            --section-bg: #f9f9f9;
+            --black: #000000;
+            --white: #FFFFFF;
+            --gray: #666666;
+            --light-gray: #F5F5F5;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            background-color: var(--light-color);
+            color: var(--black);
+            background-color: var(--white);
+            overflow-x: hidden;
         }
 
         .container {
             width: 90%;
-            max-width: 960px; /* Slightly smaller for a more basic feel */
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
 
         /* Header */
         header {
-            background: var(--light-color);
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
+            padding: 40px 0;
+            border-bottom: 1px solid #E5E5E5;
         }
 
         header .container {
@@ -43,171 +46,251 @@
             align-items: center;
         }
 
-        header .logo {
-            font-size: 1.7em;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
+        .company-name {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
         }
 
         nav ul {
             list-style: none;
-            padding: 0;
-            margin: 0;
             display: flex;
+            gap: 40px;
         }
 
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
+        nav a {
             text-decoration: none;
-            color: var(--dark-color);
-            font-weight: 500;
+            color: var(--black);
+            font-size: 15px;
+            font-weight: 400;
+            transition: opacity 0.2s;
         }
 
-        nav ul li a:hover {
-            color: var(--primary-color);
+        nav a:hover {
+            opacity: 0.6;
         }
 
         /* Hero Section */
         .hero {
-            padding: 60px 0;
+            padding: 120px 0 100px;
             text-align: center;
-            background-color: var(--section-bg); /* Light background for hero */
         }
 
         .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: var(--dark-color);
-        }
-        .hero h1 .highlight {
-             color: var(--primary-color);
-        }
-
-        .hero p.tagline {
-            font-size: 1.2em;
-            margin-bottom: 25px;
-            color: #555;
-            max-width: 600px;
+            font-size: 64px;
+            font-weight: 600;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
-        
-        .app-stores {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+
+        .hero p {
+            font-size: 20px;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
         }
 
-        .app-stores img {
-            height: 45px;
+        /* Metrics Section */
+        .metrics {
+            padding: 80px 0;
+            background-color: var(--light-gray);
         }
-        
-        /* Features Section */
-        .features {
-            padding: 50px 0;
-        }
-        .features .section-title {
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            max-width: 900px;
+            margin: 0 auto;
             text-align: center;
-            font-size: 2em;
-            margin-bottom: 40px;
-            color: var(--dark-color);
         }
 
-        .features-list { /* Changed from grid to simple list for basic feel */
-            max-width: 700px;
+        .metric-item h2 {
+            font-size: 56px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .metric-item p {
+            font-size: 16px;
+            color: var(--gray);
+            font-weight: 400;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+        }
+
+        .about-content {
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .feature-item {
-            background: var(--light-color);
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 6px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-        }
-        
-        .feature-item h3 {
-            font-size: 1.3em;
-            margin-bottom: 8px;
-            color: var(--primary-color);
+        .about h2 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            letter-spacing: -1px;
         }
 
-        .feature-item p {
-            font-size: 1em;
-            color: #666;
+        .about p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--gray);
+            margin-bottom: 24px;
         }
 
-        /* Call to Action Section */
-        .cta {
-            background-color: var(--primary-color);
-            color: var(--light-color);
-            padding: 50px 0;
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background-color: var(--light-gray);
+        }
+
+        .features h2 {
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 60px;
+            letter-spacing: -1px;
             text-align: center;
         }
 
-        .cta h2 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            color: var(--light-color);
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        .cta p {
-            font-size: 1.1em;
-            margin-bottom: 25px;
-            max-width: 550px;
-            margin-left: auto;
-            margin-right: auto;
+        .feature-card {
+            padding: 32px;
+            background: var(--white);
+            border: 1px solid #E5E5E5;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--gray);
         }
 
         /* Footer */
         footer {
-            background: var(--dark-color);
-            color: #ccc; /* Lighter grey for dark bg */
+            padding: 60px 0;
+            border-top: 1px solid #E5E5E5;
+        }
+
+        footer .container {
             text-align: center;
-            padding: 25px 0;
-            font-size: 0.9em;
+        }
+
+        footer h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
         }
 
         footer p {
-            margin: 0 0 8px 0;
+            font-size: 15px;
+            color: var(--gray);
+            margin-bottom: 8px;
         }
 
         footer a {
-            color: var(--primary-color);
+            color: var(--black);
             text-decoration: none;
+            transition: opacity 0.2s;
         }
+
         footer a:hover {
-            text-decoration: underline;
+            opacity: 0.6;
+        }
+
+        .social-links {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .social-links a {
+            font-size: 15px;
+            color: var(--gray);
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2em;
-            }
-            .hero p.tagline {
-                font-size: 1.1em;
-            }
-            .features .section-title {
-                font-size: 1.7em;
-            }
-            .feature-item h3 {
-                font-size: 1.2em;
-            }
             header .container {
                 flex-direction: column;
-                gap: 10px;
+                gap: 20px;
             }
+
             nav ul {
-                justify-content: center;
+                gap: 24px;
             }
-            nav ul li {
-                margin: 0 10px;
+
+            .hero {
+                padding: 80px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+                letter-spacing: -1px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .metrics {
+                padding: 60px 0;
+            }
+
+            .metrics-grid {
+                gap: 40px;
+                grid-template-columns: 1fr;
+            }
+
+            .metric-item h2 {
+                font-size: 44px;
+            }
+
+            .about {
+                padding: 60px 0;
+            }
+
+            .about h2 {
+                font-size: 32px;
+            }
+
+            .about p {
+                font-size: 16px;
+            }
+
+            .features {
+                padding: 60px 0;
+            }
+
+            .features h2 {
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+
+            .features-grid {
+                gap: 24px;
             }
         }
     </style>
@@ -216,10 +299,10 @@
 
     <header>
         <div class="container">
-            <a href="#" class="logo">Melos</a>
+            <div class="company-name">Melos</div>
             <nav>
                 <ul>
-                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="privacy/">Privacy</a></li>
                 </ul>
             </nav>
@@ -228,47 +311,76 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Learn Languages with <span class="highlight">Music</span>.</h1>
-            <p class="tagline">Melos helps you learn new phrases effortlessly.</p>
+            <h1>Language learning through AI music</h1>
+            <p>Making language acquisition engaging and accessible through the universal language of music.</p>
         </div>
     </section>
 
-    <section id="features" class="features">
+    <section class="metrics">
         <div class="container">
-            <h2 class="section-title">Core Features</h2>
-            <div class="features-list">
-                <div class="feature-item">
-                    <h3>Interactive Lyrics</h3>
-                    <p>Engage with synchronized Korean and English lyrics. Tap lines to jump to specific parts of the song.</p>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <h2>400K+</h2>
+                    <p>Instagram Followers</p>
                 </div>
-                <div class="feature-item">
-                    <h3>Detailed Breakdowns</h3>
-                    <p>Understand every line with vocabulary explanations, grammar points, and example sentences.</p>
+                <div class="metric-item">
+                    <h2>140+</h2>
+                    <p>Countries</p>
                 </div>
-                <div class="feature-item">
-                    <h3>Track Your Progress</h3>
-                    <p>Test your knowledge with quizzes for each song and see your scores. Save your favorite songs and albums to your library.</p>
+                <div class="metric-item">
+                    <h2>5.0</h2>
+                    <p>App Rating</p>
                 </div>
-                <div class="feature-item">
-                    <h3>Guest Mode & Account Sync</h3>
-                    <p>Try out the app as a guest, and then create an account using Email, Google, or Apple to save your progress across devices.</p>
+                <div class="metric-item">
+                    <h2>Global</h2>
+                    <p>Community</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta">
+    <section id="about" class="about">
         <div class="container">
-            <h2>Ready to Start Learning?</h2>
-            <p>Download Melos today and turn your love for music into a language learning adventure!</p>
+            <div class="about-content">
+                <h2>About Melos</h2>
+                <p>Melos is a mobile application that transforms how people learn languages by combining interactive lyrics, detailed breakdowns, and progress tracking with their favorite music.</p>
+                <p>Our platform enables users to learn new languages through synchronized lyrics, comprehensive vocabulary explanations, and engaging quizzes—all while enjoying the music they love.</p>
+                <p>With a global community spanning over 140 countries and a strong social media presence, Melos is redefining language education for the modern learner.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Platform Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Interactive Lyrics</h3>
+                    <p>Synchronized bilingual lyrics with tap-to-jump navigation for seamless learning.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Detailed Breakdowns</h3>
+                    <p>Comprehensive vocabulary, grammar explanations, and contextual examples for every line.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Progress Tracking</h3>
+                    <p>Quiz-based knowledge testing and personalized libraries to track learning journey.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>© 2025 Melos. All rights reserved.</p>
-            <p><a href="privacy/">Privacy Policy</a></p>
-            <p>Contact Us: <a href="mailto:support@mymelos.com">support@mymelos.com</a></p>
+            <h3>Contact</h3>
+            <p><a href="mailto:support@mymelos.com">support@mymelos.com</a></p>
+            <div class="social-links">
+                <a href="https://instagram.com/korean_melos" target="_blank">Instagram</a>
+                <a href="https://apps.apple.com/us/app/melos-music-learn-korean/id6747023433" target="_blank">App Store</a>
+                <a href="https://play.google.com/store/apps/details?id=com.dylanagentbuilder.LingoTunesApp&hl=en" target="_blank">Google Play</a>
+                <a href="privacy/">Privacy Policy</a>
+            </div>
+            <p style="margin-top: 32px; font-size: 14px;">© 2025 Melos. All rights reserved.</p>
         </div>
     </footer>
 
