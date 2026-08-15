@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url=https://apps.apple.com/us/app/melos-learn-languages/id6747023433">
+    <meta name="robots" content="noindex">
+    <title>Opening the App Store — Melos</title>
+    <link rel="canonical" href="https://apps.apple.com/us/app/melos-learn-languages/id6747023433">
+    <link rel="icon" type="image/png" href="/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'DM Sans',system-ui,sans-serif;color:#0A0A0A;background:#fff;
+             min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px;
+             -webkit-font-smoothing:antialiased}
+        .card{width:100%;max-width:420px;text-align:center}
+        .spinner{width:36px;height:36px;margin:0 auto 24px;border-radius:50%;
+                 border:3px solid #E8E8E8;border-top-color:#D4A853;animation:spin .8s linear infinite}
+        @keyframes spin{to{transform:rotate(360deg)}}
+        h1{font-size:21px;font-weight:700;letter-spacing:-.02em;margin-bottom:8px}
+        p{font-size:15px;line-height:1.55;color:#555}
+        #fallback{margin-top:4px}
+        #fallback .lead{font-size:19px;font-weight:700;color:#0A0A0A;margin-bottom:20px;letter-spacing:-.02em}
+        ol{list-style:none;counter-reset:s;text-align:left;display:inline-block;margin:0 auto}
+        ol li{counter-increment:s;position:relative;padding:0 0 0 40px;margin-bottom:14px;
+              font-size:16px;line-height:1.5;color:#0A0A0A}
+        ol li::before{content:counter(s);position:absolute;left:0;top:-1px;width:26px;height:26px;
+                      border-radius:50%;background:#0A0A0A;color:#fff;font-size:13px;font-weight:700;
+                      display:flex;align-items:center;justify-content:center}
+        .dots{display:inline-block;background:#F6F6F6;border:1px solid #E8E8E8;border-radius:6px;
+              padding:1px 8px;font-weight:700;letter-spacing:1px}
+        .alt{margin-top:22px;padding-top:20px;border-top:1px solid #E8E8E8;font-size:15px}
+        .alt strong{color:#0A0A0A}
+        .btn{display:inline-block;margin-top:22px;background:#0A0A0A;color:#fff;text-decoration:none;
+             padding:13px 26px;border-radius:12px;font-size:15px;font-weight:600}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="spinner" id="spinner"></div>
+        <h1 id="title">Opening the App Store…</h1>
+        <p id="wait">This should only take a second.</p>
+ 
+        <div id="fallback" hidden>
+            <p class="lead">Didn't open?</p>
+            <ol>
+                <li>Tap <span class="dots">•••</span> at the top right of this screen</li>
+                <li>Choose <strong>Open in Browser</strong></li>
+            </ol>
+            <p class="alt">Or just search <strong>"Melos"</strong> in the App Store.</p>
+            <a class="btn" href="https://apps.apple.com/us/app/melos-learn-languages/id6747023433">Try again</a>
+        </div>
+    </div>
+ 
+    <script>
+        var TARGET = "https://apps.apple.com/us/app/melos-learn-languages/id6747023433";
+        try { window.location.replace(TARGET); } catch (e) {}
+        setTimeout(function () {
+            document.getElementById('spinner').hidden = true;
+            document.getElementById('title').hidden = true;
+            document.getElementById('wait').hidden = true;
+            document.getElementById('fallback').hidden = false;
+        }, 2500);
+    </script>
+</body>
+</html>
