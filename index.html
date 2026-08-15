@@ -14,7 +14,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         :root {
             --black: #0A0A0A;
             --white: #FFFFFF;
@@ -24,7 +23,6 @@
             --gray-100: #F6F6F6;
             --gold: #D4A853;
         }
-
         body {
             font-family: 'DM Sans', sans-serif;
             color: var(--black);
@@ -33,46 +31,38 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-
         /* ---- Animations ---- */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
         @keyframes scaleIn {
             from { opacity: 0; transform: scale(0.95); }
             to { opacity: 1; transform: scale(1); }
         }
-
         .animate {
             opacity: 0;
             animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-
         .animate-d1 { animation-delay: 0.1s; }
         .animate-d2 { animation-delay: 0.2s; }
         .animate-d3 { animation-delay: 0.3s; }
         .animate-d4 { animation-delay: 0.4s; }
         .animate-d5 { animation-delay: 0.5s; }
         .animate-d6 { animation-delay: 0.6s; }
-
         .scroll-animate {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         }
-
         .scroll-animate.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
         /* ---- Header ---- */
         header {
             padding: 28px 0;
@@ -86,7 +76,6 @@
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         }
-
         header .wrap {
             width: 90%;
             max-width: 1100px;
@@ -95,14 +84,12 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             font-size: 22px;
             font-weight: 700;
             letter-spacing: -0.5px;
             color: var(--black);
         }
-
         nav a {
             text-decoration: none;
             color: var(--gray-600);
@@ -111,23 +98,19 @@
             margin-left: 32px;
             transition: color 0.2s;
         }
-
         nav a:hover {
             color: var(--black);
         }
-
         /* ---- Hero ---- */
         .hero {
             padding: 180px 0 80px;
             text-align: center;
         }
-
         .hero-inner {
             width: 90%;
             max-width: 760px;
             margin: 0 auto;
         }
-
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -141,11 +124,9 @@
             color: var(--gray-600);
             margin-bottom: 32px;
         }
-
         .hero-badge span {
             color: var(--gold);
         }
-
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(42px, 7vw, 72px);
@@ -155,12 +136,10 @@
             margin-bottom: 20px;
             color: var(--black);
         }
-
         .hero h1 em {
             font-style: italic;
             color: var(--gold);
         }
-
         .hero p {
             font-size: 18px;
             line-height: 1.6;
@@ -168,14 +147,12 @@
             max-width: 480px;
             margin: 0 auto 40px;
         }
-
         .store-buttons {
             display: flex;
             justify-content: center;
             gap: 16px;
             flex-wrap: wrap;
         }
-
         .store-btn {
             display: inline-flex;
             align-items: center;
@@ -187,33 +164,27 @@
             font-weight: 600;
             transition: transform 0.2s, box-shadow 0.2s;
         }
-
         .store-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
-
         .store-btn:active {
             transform: translateY(0);
         }
-
         .store-btn-apple {
             background: var(--black);
             color: var(--white);
         }
-
         .store-btn-google {
             background: var(--white);
             color: var(--black);
             border: 1.5px solid var(--gray-200);
         }
-
         .store-btn svg {
             width: 22px;
             height: 22px;
             flex-shrink: 0;
         }
-
         .store-btn-label small {
             display: block;
             font-size: 10px;
@@ -222,7 +193,6 @@
             line-height: 1;
             text-align: left;
         }
-
         .store-btn-label strong {
             display: block;
             font-size: 15px;
@@ -230,7 +200,6 @@
             line-height: 1.2;
             text-align: left;
         }
-
         /* ---- Stats Bar ---- */
         .stats {
             padding: 60px 0;
@@ -238,7 +207,6 @@
             border-bottom: 1px solid var(--gray-200);
             background: var(--gray-100);
         }
-
         .stats-inner {
             width: 90%;
             max-width: 900px;
@@ -248,7 +216,6 @@
             gap: 20px;
             flex-wrap: wrap;
         }
-
         .stat-pill {
             display: flex;
             align-items: center;
@@ -261,7 +228,6 @@
             min-width: 240px;
             max-width: 300px;
         }
-
         .stat-icon {
             width: 44px;
             height: 44px;
@@ -272,30 +238,25 @@
             font-size: 20px;
             flex-shrink: 0;
         }
-
         .stat-icon-stars { background: #FFF8E7; }
         .stat-icon-globe { background: #E7F5FF; }
         .stat-icon-social { background: #F0E7FF; }
-
         .stat-text {
             display: flex;
             flex-direction: column;
         }
-
         .stat-value {
             font-size: 18px;
             font-weight: 700;
             color: var(--black);
             line-height: 1.2;
         }
-
         .stat-label {
             font-size: 13px;
             color: var(--gray-400);
             font-weight: 400;
             line-height: 1.4;
         }
-
         .stat-pill-link {
             text-decoration: none;
             color: inherit;
@@ -306,34 +267,28 @@
             max-width: 300px;
             display: flex;
         }
-
         .stat-pill-link .stat-pill {
             min-width: unset;
             max-width: unset;
             flex: 1;
             cursor: pointer;
         }
-
         .stat-pill-link:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
         }
-
         .stat-pill-link:hover .stat-pill {
             border-color: var(--gray-400);
         }
-
         /* ---- How It Works ---- */
         .how-it-works {
             padding: 100px 0;
         }
-
         .section-wrap {
             width: 90%;
             max-width: 1000px;
             margin: 0 auto;
         }
-
         .section-label {
             font-size: 13px;
             font-weight: 600;
@@ -343,7 +298,6 @@
             text-align: center;
             margin-bottom: 16px;
         }
-
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: clamp(30px, 5vw, 42px);
@@ -353,14 +307,12 @@
             margin-bottom: 64px;
             color: var(--black);
         }
-
         .steps {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
             counter-reset: step;
         }
-
         .step {
             text-align: center;
             padding: 40px 28px;
@@ -371,12 +323,10 @@
             counter-increment: step;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-
         .step:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
         }
-
         .step-number {
             width: 48px;
             height: 48px;
@@ -390,47 +340,39 @@
             font-weight: 700;
             margin: 0 auto 20px;
         }
-
         .step-icon {
             font-size: 36px;
             margin-bottom: 16px;
             display: block;
         }
-
         .step h3 {
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 8px;
             color: var(--black);
         }
-
         .step p {
             font-size: 15px;
             color: var(--gray-600);
             line-height: 1.5;
         }
-
         /* ---- Features ---- */
         .features {
             padding: 100px 0;
             background: var(--black);
             color: var(--white);
         }
-
         .features .section-label {
             color: var(--gray-400);
         }
-
         .features .section-title {
             color: var(--white);
         }
-
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
-
         .feature-card {
             padding: 36px 28px;
             border-radius: 20px;
@@ -438,12 +380,10 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: background 0.3s, transform 0.3s;
         }
-
         .feature-card:hover {
             background: rgba(255, 255, 255, 0.08);
             transform: translateY(-4px);
         }
-
         .feature-icon {
             width: 52px;
             height: 52px;
@@ -455,32 +395,27 @@
             font-size: 24px;
             margin-bottom: 20px;
         }
-
         .feature-card h3 {
             font-size: 19px;
             font-weight: 700;
             margin-bottom: 10px;
             color: var(--white);
         }
-
         .feature-card p {
             font-size: 15px;
             line-height: 1.6;
             color: var(--gray-400);
         }
-
         /* ---- Final CTA ---- */
         .final-cta {
             padding: 100px 0;
             text-align: center;
         }
-
         .final-cta-inner {
             width: 90%;
             max-width: 600px;
             margin: 0 auto;
         }
-
         .final-cta h2 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(30px, 5vw, 44px);
@@ -489,21 +424,18 @@
             margin-bottom: 16px;
             color: var(--black);
         }
-
         .final-cta p {
             font-size: 17px;
             color: var(--gray-600);
             margin-bottom: 36px;
             line-height: 1.5;
         }
-
         /* ---- Footer ---- */
         footer {
             padding: 40px 0;
             border-top: 1px solid var(--gray-200);
             text-align: center;
         }
-
         .footer-links {
             display: flex;
             justify-content: center;
@@ -511,80 +443,65 @@
             margin-bottom: 20px;
             flex-wrap: wrap;
         }
-
         .footer-links a {
             text-decoration: none;
             font-size: 14px;
             color: var(--gray-400);
             transition: color 0.2s;
         }
-
         .footer-links a:hover {
             color: var(--black);
         }
-
         .footer-copy {
             font-size: 13px;
             color: var(--gray-400);
         }
-
         /* ---- Responsive ---- */
         @media (max-width: 768px) {
             header {
                 padding: 20px 0;
             }
-
             .hero {
                 padding: 140px 0 60px;
             }
-
             .hero p {
                 font-size: 16px;
             }
-
             .stats-inner {
                 flex-direction: column;
                 align-items: center;
             }
-
             .stat-pill,
             .stat-pill-link {
                 max-width: 100%;
                 min-width: unset;
                 width: 100%;
             }
-
             .stat-pill-link .stat-pill {
                 width: 100%;
             }
-
             .steps {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-
             .features-grid {
                 grid-template-columns: 1fr;
                 gap: 16px;
             }
-
             .store-btn {
                 padding: 12px 22px;
             }
-
             .how-it-works,
             .features,
             .final-cta {
                 padding: 72px 0;
             }
         }
-
         @media (max-width: 380px) {
             .store-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-
             .store-btn {
                 width: 100%;
                 max-width: 220px;
@@ -594,7 +511,6 @@
     </style>
 </head>
 <body>
-
     <!-- Header -->
     <header>
         <div class="wrap">
@@ -605,7 +521,6 @@
             </nav>
         </div>
     </header>
-
     <!-- Hero -->
     <section class="hero">
         <div class="hero-inner">
@@ -615,14 +530,14 @@
             <h1 class="animate animate-d2">Learn languages through <em>music</em></h1>
             <p class="animate animate-d3">Pick a song. Sing along. Master a language — it's that simple.</p>
             <div class="store-buttons animate animate-d4">
-                <a href="https://apps.apple.com/us/app/melos-learn-languages/id6747023433" target="_blank" class="store-btn store-btn-apple">
+                <a href="/get-app" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-apple">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.89C10.1 6.87 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
                     <div class="store-btn-label">
                         <small>Download on the</small>
                         <strong>App Store</strong>
                     </div>
                 </a>
-                <a href="https://play.google.com/store/apps/details?id=com.dylanagentbuilder.LingoTunesApp&hl=en" target="_blank" class="store-btn store-btn-google">
+                <a href="/get-android" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-google">
                     <svg viewBox="0 0 24 24" fill="none"><path d="M3.61 1.814L13.793 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .61-.92z" fill="#4285F4"/><path d="M17.456 8.337L5.27.863a1.005 1.005 0 0 0-1.046-.002l9.57 9.57 3.662-2.094z" fill="#EA4335"/><path d="M17.456 15.663L13.793 12l-9.57 9.57a1.005 1.005 0 0 0 1.046-.002l12.187-5.905z" fill="#34A853"/><path d="M21.395 10.486l-3.939-2.149L13.793 12l3.663 3.663 3.939-2.149c.732-.398.732-1.63 0-2.028z" fill="#FBBC05"/></svg>
                     <div class="store-btn-label">
                         <small>Get it on</small>
@@ -632,15 +547,14 @@
             </div>
         </div>
     </section>
-
     <!-- Stats Bar -->
     <section class="stats">
         <div class="stats-inner">
             <div class="stat-pill scroll-animate">
                 <div class="stat-icon stat-icon-stars"><svg width="22" height="22" viewBox="0 0 24 24" fill="#D4A853" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
                 <div class="stat-text">
-                    <span class="stat-value">4.9 & 5.0 Ratings</span>
-                    <span class="stat-label">App Store & Google Play · 360+ reviews worldwide</span>
+                    <span class="stat-value">4.9 &amp; 5.0 Ratings</span>
+                    <span class="stat-label">App Store &amp; Google Play · 360+ reviews worldwide</span>
                 </div>
             </div>
             <div class="stat-pill scroll-animate" style="transition-delay: 0.1s;">
@@ -650,7 +564,7 @@
                     <span class="stat-label">Downloaded and growing</span>
                 </div>
             </div>
-            <a href="https://www.instagram.com/korean_melos" target="_blank" class="stat-pill-link scroll-animate" style="transition-delay: 0.2s;">
+            <a href="https://www.instagram.com/korean_melos" target="_blank" rel="noopener noreferrer" class="stat-pill-link scroll-animate" style="transition-delay: 0.2s;">
                 <div class="stat-pill">
                     <div class="stat-icon stat-icon-social"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/><line x1="12" y1="18" x2="12" y2="18"/></svg></div>
                     <div class="stat-text">
@@ -661,7 +575,6 @@
             </a>
         </div>
     </section>
-
     <!-- How It Works -->
     <section id="how-it-works" class="how-it-works">
         <div class="section-wrap">
@@ -689,7 +602,6 @@
             </div>
         </div>
     </section>
-
     <!-- Features -->
     <section class="features">
         <div class="section-wrap">
@@ -714,21 +626,20 @@
             </div>
         </div>
     </section>
-
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="final-cta-inner">
             <h2 class="scroll-animate">Start learning today</h2>
             <p class="scroll-animate">Free to download. Available on iOS and Android.</p>
             <div class="store-buttons scroll-animate">
-                <a href="https://apps.apple.com/us/app/melos-learn-languages/id6747023433" target="_blank" class="store-btn store-btn-apple">
+                <a href="/get-app" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-apple">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.89C10.1 6.87 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
                     <div class="store-btn-label">
                         <small>Download on the</small>
                         <strong>App Store</strong>
                     </div>
                 </a>
-                <a href="https://play.google.com/store/apps/details?id=com.dylanagentbuilder.LingoTunesApp&hl=en" target="_blank" class="store-btn store-btn-google">
+                <a href="/get-android" target="_blank" rel="noopener noreferrer" class="store-btn store-btn-google">
                     <svg viewBox="0 0 24 24" fill="none"><path d="M3.61 1.814L13.793 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .61-.92z" fill="#4285F4"/><path d="M17.456 8.337L5.27.863a1.005 1.005 0 0 0-1.046-.002l9.57 9.57 3.662-2.094z" fill="#EA4335"/><path d="M17.456 15.663L13.793 12l-9.57 9.57a1.005 1.005 0 0 0 1.046-.002l12.187-5.905z" fill="#34A853"/><path d="M21.395 10.486l-3.939-2.149L13.793 12l3.663 3.663 3.939-2.149c.732-.398.732-1.63 0-2.028z" fill="#FBBC05"/></svg>
                     <div class="store-btn-label">
                         <small>Get it on</small>
@@ -738,17 +649,15 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="footer-links">
             <a href="mailto:support@mymelos.com">support@mymelos.com</a>
-            <a href="https://www.instagram.com/korean_melos" target="_blank">Instagram</a>
+            <a href="https://www.instagram.com/korean_melos" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="privacy/">Privacy Policy</a>
         </div>
         <p class="footer-copy">© 2025 Melos. All rights reserved.</p>
     </footer>
-
     <script>
         // Scroll-triggered animations
         const observer = new IntersectionObserver((entries) => {
@@ -759,9 +668,7 @@
                 }
             });
         }, { threshold: 0.15 });
-
         document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
     </script>
-
 </body>
 </html>
